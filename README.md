@@ -27,11 +27,14 @@ modeling with details from the beginning looked easier.
 I added modifiers already in first part. Then I continued with sides of the car. I used also Main crease when I needed more sharp edge (set to 1.0). <br />
 ![obrazek](https://github.com/user-attachments/assets/6f1a6b4d-6618-4688-af8f-2ff5eb7a4670)
 ![obrazek](https://github.com/user-attachments/assets/325f28f1-9bc1-4abe-9e02-27f83786df79)
+<br />
 After modeling back of the car, I started to model the roof and connecting all parts. Burt the whole car is modeled as one “plane”.<br />
 ![obrazek](https://github.com/user-attachments/assets/746f6238-6132-4be1-8926-926e4ad67092)
+<br />
 Then I added details - lights, handle and so one. It was done by inserting face and then extruding it in right way. 
 In last step, I made wheels of the car as different geometry and using the same modifiers. I ended with doing back of the car. <br />
 ![obrazek](https://github.com/user-attachments/assets/da3cd0d5-aba9-4d84-8d83-0d1a9d2e8aeb)
+<br />
 
 ### Second part of the model:
 I started creating materials that I needed for my car. I made a base material for the car with the dominant value of specular. 
@@ -42,20 +45,20 @@ In these materials I used Principled BSDF. On the other hand by creating a glass
 ![obrazek](https://github.com/user-attachments/assets/2988799f-0f7f-41a6-b6bf-a7bc564f9c2b)
 ![obrazek](https://github.com/user-attachments/assets/52b039df-4917-4173-adf9-864d26c74490)
 ![obrazek](https://github.com/user-attachments/assets/9748580e-6b5f-4d8f-8b23-cc21f48ea633)
-
+<br />
 Then I assign these materials to faces of the model. When two faces next to each other have different material, it was needed to set the adjacent edge as sharp and set mean crease to 1.0. <br />
-![obrazek](https://github.com/user-attachments/assets/a6880e6d-d5bb-4293-9d21-a63b38b62354)
+![obrazek](https://github.com/user-attachments/assets/a6880e6d-d5bb-4293-9d21-a63b38b62354)<br />
 I did Smart UV with Island Margin 0.0001. I also tried to Unwrap it but there were some inaccuracies.<br />
-![obrazek](https://github.com/user-attachments/assets/c97bc39f-34d1-40e5-a3da-6044d5d050d0)
+![obrazek](https://github.com/user-attachments/assets/c97bc39f-34d1-40e5-a3da-6044d5d050d0)<br />
 I created diffuse map for the base color. In every material was added Image texture with new image diffuse_bake and set Color space to sRGB. I set metallic to 0 and then bake new texture as diffuse and set sampling as on the picture. <br />
-![obrazek](https://github.com/user-attachments/assets/049a59ac-7968-4f8a-a6b9-318d6423a096)
+![obrazek](https://github.com/user-attachments/assets/049a59ac-7968-4f8a-a6b9-318d6423a096)<br />
 I also created roughness map. In every material was added Image texture with new image roughness and set Color space to Non-color. I bake the new texture as Roughness. <br />
-![obrazek](https://github.com/user-attachments/assets/aa61143b-529d-42a4-a730-eac2133e5348)
+![obrazek](https://github.com/user-attachments/assets/aa61143b-529d-42a4-a730-eac2133e5348)<br />
 Very similarly was the specular map created. But the specular value of parameters was provided to roughness and also baked as Roughness.
 Last was the metallic map created. The metallic value was provided to emission and baked as Emit.
 
 To connect all created textures I used new material with Image Textures connected to relevant parameter.
-![obrazek](https://github.com/user-attachments/assets/64090432-2e20-44fd-9d50-20d4feac4bd0)
+![obrazek](https://github.com/user-attachments/assets/64090432-2e20-44fd-9d50-20d4feac4bd0)<br />
 
 
 
